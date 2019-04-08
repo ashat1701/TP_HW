@@ -43,7 +43,7 @@ void EmailNotifier::Notify(const std::string &message) {
 }
 
 void EmailNotifier::Initialize(const inicpp::section& section) {
-  vmime::utility::url url("smtp://smtp.gmail.com");
+  vmime::utility::url url("smtps://smtp.gmail.com:465");
   transport_ = session->getTransport(url);
 
   from_email_ = section["from"].get<string_ini_t>();
