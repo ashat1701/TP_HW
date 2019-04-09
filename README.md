@@ -37,11 +37,15 @@
 
 C помощью curl:
 
-```sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/ashat1701/TP_HW/devops_compile/Decorator_only.sh)" ```
+```bash
+sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/ashat1701/TP_HW/devops_compile/Decorator_only.sh)" 
+```
 
 С помощью wget:
 
-```sudo sh -c "$(wget https://raw.githubusercontent.com/ashat1701/TP_HW/devops_compile/Decorator_only.sh -O -)"```
+```sh
+sudo sh -c "$(wget https://raw.githubusercontent.com/ashat1701/TP_HW/devops_compile/Decorator_only.sh -O -)"
+```
 ## Возможные проблемы и ошибки
 В первую очередь проверьте свое подключение к vpn(прокси). Если вылетают ошибки хэндшейка или auth error - это скорее всего проблема интернета. Если во время сборки вылетает ошибка с sendmail - то необходимо удалить все что связано с vmime и собрать все заново.
 И главный костыль - это смена адреса smtp://stmp.google.com на smtps://smtp.google.com:465. Эта замена была найдена здесь: [тыкъ](https://www.vmime.org/tag/smtp). Я не знаю почему без этого программа не подключается к серверам google, но после этого исправления все заработало. Также, для того чтобы узнать chatID был использован бот - @getidsbot.
