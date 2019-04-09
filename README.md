@@ -27,7 +27,7 @@
 ## Сборка подпроекта Decorator
 1. Запустите файл decorator_compile.sh (возможно потребуется `chmod +x decorator_compile.sh`). Этот файл попросит прав администратора для установки дополнительных пакетов. Он же и запустит Decorator.
 
-Название чата - [@mipt_tp_bot_chanell](t.me/mipt_tp_bot_chanell)
+Название чата - [@mipt_tp_bot_chanell](https://t.me/mipt_tp_bot_chanell)
 
 Почта - ak3776413@gmail.com
 
