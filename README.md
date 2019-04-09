@@ -19,7 +19,7 @@
 4. Выполните cmake со специальными настройками - `PATH="$PATH:<Путь до папки tools из 2 шага>/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin" cmake -DON_PI=ON -DSYSROOT="<Путь до папки tools из 2 шага>/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/arm-linux-gnueabihf/sysroot" .`
 5. Запустите `make`
 6. Исполняемые файлы файлы лежат директорией выше папки c проектом в папках bin-arm и lib-arm. Для того, чтобы поместить их в архив выполните `zip -r9 archive.zip ../lib-arm ../bin-arm/`. Для того, чтобы заархивировать весь проект - `zip -r9 archive.zip ../PatternsCollection ../lib-arm ../bin-arm`
-7. Команда для запуска - `LD_LIBRARY_PATH="<Путь до папки lib-arm>" ./../bin-arm/Facade`
+7. Команда для запуска - `LD_LIBRARY_PATH="$LD_LIBRARY_PATH:<Путь до папки lib-arm>" ./../bin-arm/Facade`
 8. Скрипт для запуска - start.sh
 
 ## Шаги которые привели к такому + попытки исправить баги
