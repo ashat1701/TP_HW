@@ -1,5 +1,5 @@
 #!/bin/sh
-sudo apt install libboost1-all-dev
+sudo apt install libboost-all-dev
 sudo apt install libcurl4-openssl-dev
 sudo apt install gnutls-dev
 sudo apt install doxygen
