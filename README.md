@@ -33,15 +33,15 @@
 
 Пароль от почты - Trinity3!
 
-Если же Вы не хотите клонировать весь репозиторий ради сборки декоратора - то вот еще один способ запустить декоратор. Для него потребуется наличие cURL (или wget).
+Если же Вы не хотите клонировать весь репозиторий ради сборки декоратора - то вот еще один способ запустить декоратор. Для него потребуется наличие cURL (или wget), а также git.
 
 C помощью curl:
 
-```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ashat1701/TP_HW/devops_compile/Decorator_only.sh)" ```
+```sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/ashat1701/TP_HW/devops_compile/Decorator_only.sh)" ```
 
 С помощью wget:
 
-```sh -c "$(wget https://raw.githubusercontent.com/ashat1701/TP_HW/devops_compile/Decorator_only.sh -O -)"```
+```sudo sh -c "$(wget https://raw.githubusercontent.com/ashat1701/TP_HW/devops_compile/Decorator_only.sh -O -)"```
 ## Возможные проблемы и ошибки
 В первую очередь проверьте свое подключение к vpn(прокси). Если вылетают ошибки хэндшейка или auth error - это скорее всего проблема интернета. Если во время сборки вылетает ошибка с sendmail - то необходимо удалить все что связано с vmime и собрать все заново.
 И главный костыль - это смена адреса smtp://stmp.google.com на smtps://smtp.google.com:465. Эта замена была найдена здесь: [тыкъ](https://www.vmime.org/tag/smtp). Я не знаю почему без этого программа не подключается к серверам google, но после этого исправления все заработало. Также, для того чтобы узнать chatID был использован бот - @getidsbot.
